@@ -1,8 +1,7 @@
-# assignment
+# Download, unzip and read data into table by name "data"
+
 data <- read.table('household_power_consumption.txt', sep=';', header=T, 
-                   colClasses = c('character', 'character', 'numeric',
-                                  'numeric', 'numeric', 'numeric',
-                                  'numeric', 'numeric', 'numeric'),
+                   colClasses = c('character', 'character', 'numeric','numeric', 'numeric', 'numeric','numeric', 'numeric', 'numeric'),
                    na.strings='?')
 data$DateTime <- strptime(paste(data$Date, data$Time), 
                           "%d/%m/%Y %H:%M:%S")
